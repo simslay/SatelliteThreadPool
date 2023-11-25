@@ -22,22 +22,14 @@ import javafx.scene.control.Label;
 
 public class HelloController implements Initializable {
     @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
-    @FXML
     private ListView lvAffichageFiches;
-
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        final String maCle ="MvhdCR0W3R9j8tYzPeYY3IKEYJNycXzgqgXbwYG1";
+        final String maCle = "MvhdCR0W3R9j8tYzPeYY3IKEYJNycXzgqgXbwYG1";
         final String urlDBImages = "https://epic.gsfc.nasa.gov";
-        String dataJson=null;
+        String dataJson = null;
         try {
             dataJson = UtilsConnexionNASA.getJsonFromNasaAPI(maCle);
         } catch (IOException e) {
